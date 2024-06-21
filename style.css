@@ -1,0 +1,17 @@
+/* Estilos para as imagens dos colegas */
+/* Estilos para as imagens dos colegas */
+.rounded-square {
+    width: 150px; /* Tamanho da largura */
+    height: 150px; /* Tamanho da altura */
+    object-fit: cover; /* Para manter a proporção e cortar a imagem */
+    border-radius: 10px; /* Bordas levemente arredondadas */
+}
+
+
+/* Estilos para o texto dos nomes dos colegas */
+.colleague-name {
+    margin-top: 10px; /* Espaço entre a imagem e o texto */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    color: #333; /* Cor do texto */
+}
