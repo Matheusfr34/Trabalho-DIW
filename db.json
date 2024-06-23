@@ -1,0 +1,57 @@
+{
+  "albuns": [
+    {
+      "titulo": "Acessibilidade Digital para Idosos",
+      "imagem": "img/ti.jpg",
+      "link": "repo.html"
+    },
+    {
+      "titulo": "Dificuldade de gerenciar finanças",
+      "imagem": "img/ti.jpg",
+      "link": "repo.html"
+    },
+    {
+      "titulo": "Vício de crianças em celulares/tablets",
+      "imagem": "img/ti.jpg",
+      "link": "repo.html"
+    }
+  ], 
+  "destaques": [
+    {
+      "identificador": "1",
+      "titulo": "Curso de HTML e CSS - Estrutura básica do HTML - Aula 1",
+      "descricao": "Aprender a utilizar HTML e CSS",
+      "imagem": "",
+      "conteudo": "https://www.youtube.com/watch?v=bCFTv8a59PE"
+    },
+    {
+      "identificador": "2",
+      "titulo": "Curso de HTML e CSS - Estrutura básica do HTML - Aula 1",
+      "descricao": "Aprender a utilizar HTML e CSS",
+      "imagem": "",
+      "conteudo": "https://www.youtube.com/watch?v=bCFTv8a59PE"
+    },
+    {
+      "identificador": "3",
+      "titulo": "Curso de HTML e CSS - Estrutura básica do HTML - Aula 1",
+      "descricao": "Aprender a utilizar HTML e CSS",
+      "imagem": "",
+      "conteudo": "https://www.youtube.com/watch?v=bCFTv8a59PE"
+    },
+    {
+      "identificador": "4",
+      "titulo": "Curso de HTML e CSS - Estrutura básica do HTML - Aula 1",
+      "descricao": "Aprender a utilizar HTML e CSS",
+      "imagem": "",
+      "conteudo": "https://www.youtube.com/watch?v=bCFTv8a59PE"
+    },
+    {
+      "identificador": "5",
+      "titulo": "Curso de HTML e CSS - Estrutura básica do HTML - Aula 1",
+      "descricao": "Aprender a utilizar HTML e CSS",
+      "imagem": "",
+      "conteudo": "https://www.youtube.com/watch?v=bCFTv8a59PE"
+    }
+  ]
+
+}
