@@ -26,32 +26,51 @@
     },
     {
       "identificador": "2",
-      "titulo": "Curso de HTML e CSS - Estrutura básica do HTML - Aula 1",
-      "descricao": "Aprender a utilizar HTML e CSS",
+      "titulo": "Curso Bootstrap #01: Introdução",
+      "descricao": "Aprender a utilizar bootstrap",
       "imagem": "",
-      "conteudo": "https://www.youtube.com/watch?v=bCFTv8a59PE"
+      "conteudo": "https://www.youtube.com/embed/SmQMZ36hJJY?list=PLnDvRpP8Bnexu5wvxogy6N49_S5Xk8Cze"
     },
     {
       "identificador": "3",
-      "titulo": "Curso de HTML e CSS - Estrutura básica do HTML - Aula 1",
-      "descricao": "Aprender a utilizar HTML e CSS",
+      "titulo": "Começa aqui o novo @CursoemVideo de HTML5 e CSS3",
+      "descricao": "Curso de HTML-5 e CSS-3",
       "imagem": "",
-      "conteudo": "https://www.youtube.com/watch?v=bCFTv8a59PE"
+      "conteudo": "https://www.youtube.com/embed/Ejkb_YpuHWs?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n"
     },
     {
       "identificador": "4",
-      "titulo": "Curso de HTML e CSS - Estrutura básica do HTML - Aula 1",
-      "descricao": "Aprender a utilizar HTML e CSS",
+      "titulo": "APRENDA TUDO SOBRE MEDIA QUERY - COMO DEIXAR UM SITE RESPONSIVO",
+      "descricao": "Curso de media query",
       "imagem": "",
-      "conteudo": "https://www.youtube.com/watch?v=bCFTv8a59PE"
+      "conteudo": "https://www.youtube.com/embed/jEf_zX4fKqU"
     },
     {
       "identificador": "5",
-      "titulo": "Curso de HTML e CSS - Estrutura básica do HTML - Aula 1",
-      "descricao": "Aprender a utilizar HTML e CSS",
+      "titulo": "Aprenda MEDIA QUERIES no CSS em 10 MINUTOS",
+      "descricao": "Media queries no CSS",
       "imagem": "",
-      "conteudo": "https://www.youtube.com/watch?v=bCFTv8a59PE"
+      "conteudo": "https://www.youtube.com/embed/zt5W562mYRo"
+    }
+  ],
+  "fotos": [
+    {
+      "identificador": "1",
+      "foto": "img/thispersondoesnotexist.com.jpeg",
+      "nome": "Bruno Maximo",
+      "perfil": "https://github.com/BrunoMaximo03"
+    },
+    {
+      "identificador": "2",
+      "foto": "img/thispersondoesnotexist.com-4.jpeg",
+      "nome": "Giovanna Naves",
+      "perfil": "https://github.com/GiovannaNaves"
+    },
+    {
+      "identificador": "3",
+      "foto": "",
+      "nome": "Vitor Trindade",
+      "perfil": "https://github.com/VitorTss"
     }
   ]
-
 }
