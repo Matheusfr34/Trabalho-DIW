@@ -2,28 +2,28 @@
   "albuns": [
     {
       "titulo": "Acessibilidade Digital para Idosos",
-      "imagem": "img/ti.jpg",
+      "imagem": "assets/img/ti.jpg",
       "link": "repo.html"
     },
     {
       "titulo": "Dificuldade de gerenciar finanças",
-      "imagem": "img/ti.jpg",
+      "imagem": "assets/img/ti.jpg",
       "link": "repo.html"
     },
     {
       "titulo": "Vício de crianças em celulares/tablets",
-      "imagem": "img/ti.jpg",
+      "imagem": "assets/img/ti.jpg",
       "link": "repo.html"
     }
   ], 
   "destaques": [
     {
-      "identificador": "1",
-      "titulo": "Curso de HTML e CSS - Estrutura básica do HTML - Aula 1",
-      "descricao": "Aprender a utilizar HTML e CSS",
+      "identificador": "4",
+      "titulo": "APRENDA TUDO SOBRE MEDIA QUERY - COMO DEIXAR UM SITE RESPONSIVO",
+      "descricao": "Curso de media query",
       "imagem": "",
-      "conteudo": "https://www.youtube.com/watch?v=bCFTv8a59PE"
-    },
+      "conteudo": "https://www.youtube.com/embed/jEf_zX4fKqU"
+      },
     {
       "identificador": "2",
       "titulo": "Curso Bootstrap #01: Introdução",
@@ -56,19 +56,19 @@
   "fotos": [
     {
       "identificador": "1",
-      "foto": "img/thispersondoesnotexist.com.jpeg",
+      "foto": "assets/img/bruno.jpeg",
       "nome": "Bruno Maximo",
       "perfil": "https://github.com/BrunoMaximo03"
     },
     {
       "identificador": "2",
-      "foto": "img/thispersondoesnotexist.com-4.jpeg",
+      "foto": "assets/img/giovanna.jpeg",
       "nome": "Giovanna Naves",
       "perfil": "https://github.com/GiovannaNaves"
     },
     {
       "identificador": "3",
-      "foto": "",
+      "foto": "assets/img/vitor.jpeg",
       "nome": "Vitor Trindade",
       "perfil": "https://github.com/VitorTss"
     }
