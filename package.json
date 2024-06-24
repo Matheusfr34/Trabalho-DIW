@@ -1,0 +1,12 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"http-server -p 3000 -o -c-1 -a localhost ./pages\" \"json-server --watch db.json --port 3001\""
+  },
+  "dependencies": {
+    "concurrently": "^6.2.1",
+    "http-server": "^14.0.0",
+    "json-server": "^0.17.4"
+  }
+}
