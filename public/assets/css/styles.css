@@ -1,0 +1,33 @@
+/* Estilos para as imagens dos colegas */
+.rounded-square {
+    width: 150px; /* Tamanho da largura */
+    height: 150px; /* Tamanho da altura */
+    object-fit: cover; /* Para manter a proporção e cortar a imagem */
+    border-radius: 10px; /* Bordas levemente arredondadas */
+}
+
+/* Estilos para o texto dos nomes dos colegas */
+.colleague-name {
+    margin-top: 10px; /* Espaço entre a imagem e o texto */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilos para as imagens do carousel */
+.carousel-item img {
+    max-width: 40%;
+    height: auto;
+}
+
+/* Reduzindo o tamanho dos cards do carousel */
+.carousel-item {
+    max-height: 300px; /* Ajuste conforme necessário */
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura do carousel */
+    height: auto; /* Mantém a proporção da imagem */
+    cursor: pointer; /* Cursor indicativo de que é clicável */
+}
