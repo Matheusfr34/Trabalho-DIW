@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const apiUrl = 'https://api.github.com/users/Matheusfr34';
+    fetchGitHubUser();
+    initializeCarousel();
+    loadDestaques();
+    loadColegasDeTrabalho();
+    loadRepositorios();
+});
 
+function fetchGitHubUser() {
+    const apiUrl = 'https://api.github.com/users/Matheusfr34';
     fetch(apiUrl)
         .then(response => {
             if (!response.ok) {
@@ -9,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
             return response.json();
         })
         .then(data => {
-            // Atualizar os elementos HTML com os dados recebidos
             document.getElementById('avatar').src = data.avatar_url;
             document.getElementById('nome').textContent = data.name || 'Nome não disponível';
             document.getElementById('bio').textContent = data.bio || 'Biografia não disponível';
@@ -19,16 +25,16 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.error('Erro ao buscar dados do GitHub:', error);
         });
-});
+}
 
-document.addEventListener('DOMContentLoaded', function() {
+function initializeCarousel() {
     var myCarousel = new bootstrap.Carousel(document.getElementById('carouselExampleCaptions'), {
-        interval: false, // Defina o intervalo para false se não quiser que o carousel mude automaticamente
+        interval: false,
     });
-});
+}
 
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('http://127.0.0.1:5500/db/db.json') // Ajuste aqui para o caminho absoluto conforme necessário
+function loadDestaques() {
+    fetch('http://127.0.0.1:5500/db/db.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erro ao carregar o arquivo JSON');
@@ -37,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(data => {
             const destaques = data.destaques;
-
             const carouselIndicators = document.querySelector('.carousel-indicators');
             const carouselInner = document.querySelector('.carousel-inner');
 
@@ -84,11 +89,10 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.error('Erro ao carregar o arquivo JSON', error);
         });
-});
+}
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('http://127.0.0.1:5500/db/db.json') // Ajuste aqui para o caminho absoluto conforme necessário
+function loadColegasDeTrabalho() {
+    fetch('http://127.0.0.1:5500/db/db.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erro ao carregar o arquivo JSON');
@@ -97,7 +101,6 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(data => {
             const colegasDeTrabalho = data.fotos;
-
             const colegasContainer = document.getElementById('colegas-de-trabalho');
 
             colegasDeTrabalho.forEach(colega => {
@@ -125,18 +128,23 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.error('Erro ao carregar dados do JSON:', error);
         });
-});
+}
 
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('http://127.0.0.1:5500/db/db.json') // Ajuste aqui para o caminho absoluto conforme necessário
-        .then(response => response.json())
+function loadRepositorios() {
+    fetch('http://127.0.0.1:5500/db/db.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar o arquivo JSON');
+            }
+            return response.json();
+        })
         .then(data => {
             const reposContainer = document.getElementById('repositorios-container');
             data.albuns.forEach(repo => {
                 let repoCard = document.createElement('div');
                 repoCard.classList.add('col-md-4', 'mb-4');
                 repoCard.innerHTML = `
-                    <a href="${repo.link}" class="card h-100">
+                    <a href="${repo.link}?id=${repo.identificador}" class="card h-100">
                         <img src="${repo.imagem}" class="card-img-top img-fluid" alt="Imagem do Repositório">
                         <div class="card-body">
                             <h5 class="card-title">${repo.titulo}</h5>
@@ -147,4 +155,4 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         })
         .catch(error => console.error('Erro ao carregar os repositórios:', error));
-});
+}
