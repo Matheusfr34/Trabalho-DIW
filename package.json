@@ -2,7 +2,7 @@
   "name": "nodejs",
   "version": "1.0.0",
   "scripts": {
-    "start": "concurrently \"http-server -p 3000 -o -c-1 -a localhost ./pages\" \"json-server --watch db.json --port 3001\""
+    "start": "concurrently \"http-server -p 3000 -o -c-1 -a localhost ./public\" \"json-server --watch db/db.json --port 3000\""
   },
   "dependencies": {
     "concurrently": "^6.2.1",
