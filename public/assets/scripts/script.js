@@ -1,9 +1,16 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     fetchGitHubUser();
     initializeCarousel();
     loadDestaques();
     loadColegasDeTrabalho();
     loadRepositorios();
+
+    const params = new URLSearchParams(window.location.search);
+    const repoId = params.get('id');
+
+    if (repoId) {
+        loadRepository(repoId);
+    }
 });
 
 function fetchGitHubUser() {
@@ -27,6 +34,59 @@ function fetchGitHubUser() {
         });
 }
 
+function loadRepository(repoId) {
+    fetch('http://localhost:3000/db/db.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar o arquivo JSON');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const repo = data.albuns.find(item => item.id === repoId);
+
+            if (!repo) {
+                console.error(`Repositório com ID ${repoId} não encontrado.`);
+                return;
+            }
+
+            // Preenchendo os dados do repositório usando a API do GitHub
+            fetch(repo.link) // repo.link contém o link da API do GitHub
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erro ao buscar dados do GitHub');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById('repo-title').textContent = `Repositório: ${data.name}`;
+                    document.getElementById('repo-description').textContent = data.description || 'Descrição não disponível';
+                    document.getElementById('repo-created-at').textContent = `Data de Criação: ${new Date(data.created_at).toLocaleDateString()}`;
+                    document.getElementById('repo-language').textContent = `Linguagem: ${data.language || 'Não informada'}`;
+                    document.getElementById('repo-url').href = data.html_url;
+                    document.getElementById('repo-url').textContent = data.html_url;
+
+                    const topicsContainer = document.getElementById('repo-topics');
+                    topicsContainer.innerHTML = '';
+                    data.topics.forEach(topic => {
+                        const topicElement = document.createElement('a');
+                        topicElement.href = `https://github.com/topics/${topic}`;
+                        topicElement.classList.add('btn', 'btn-outline-primary', 'btn-sm', 'me-2');
+                        topicElement.textContent = topic;
+                        topicsContainer.appendChild(topicElement);
+                    });
+
+                    document.getElementById('repo-stars').textContent = `Estrelas: ${data.stargazers_count}`;
+                    document.getElementById('repo-watchers').textContent = `Observadores: ${data.watchers_count}`;
+                    document.getElementById('repo-forks').textContent = `Forks: ${data.forks_count}`;
+                    document.getElementById('repo-license').textContent = `Licença: ${data.license ? data.license.name : 'Não especificada'}`;
+                })
+                .catch(error => console.error('Erro ao buscar dados do GitHub:', error));
+        })
+        .catch(error => console.error('Erro ao carregar o arquivo JSON:', error));
+}
+
+
 function initializeCarousel() {
     var myCarousel = new bootstrap.Carousel(document.getElementById('carouselExampleCaptions'), {
         interval: false,
@@ -34,7 +94,7 @@ function initializeCarousel() {
 }
 
 function loadDestaques() {
-    fetch('http://127.0.0.1:5500/db/db.json')
+    fetch('http://localhost:3000/db/db.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erro ao carregar o arquivo JSON');
@@ -92,7 +152,7 @@ function loadDestaques() {
 }
 
 function loadColegasDeTrabalho() {
-    fetch('http://127.0.0.1:5500/db/db.json')
+    fetch('http://localhost:3000/db/db.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erro ao carregar o arquivo JSON');
@@ -131,7 +191,7 @@ function loadColegasDeTrabalho() {
 }
 
 function loadRepositorios() {
-    fetch('http://127.0.0.1:5500/db/db.json')
+    fetch('http://localhost:3000/db/db.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erro ao carregar o arquivo JSON');
@@ -144,7 +204,7 @@ function loadRepositorios() {
                 let repoCard = document.createElement('div');
                 repoCard.classList.add('col-md-4', 'mb-4');
                 repoCard.innerHTML = `
-                    <a href="${repo.link}?id=${repo.identificador}" class="card h-100">
+                    <a href="repo.html?id=${repo.id}" class="card h-100">
                         <img src="${repo.imagem}" class="card-img-top img-fluid" alt="Imagem do Repositório">
                         <div class="card-body">
                             <h5 class="card-title">${repo.titulo}</h5>
