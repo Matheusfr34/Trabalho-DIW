@@ -1,12 +1,13 @@
 {
-  "name": "nodejs",
+  "name": "meu-projeto",
   "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "concurrently \"http-server -p 3000 -o -c-1 -a localhost ./public\" \"json-server --watch db/db.json --port 3000\""
+    "start": "node index.js"
   },
   "dependencies": {
-    "concurrently": "^6.2.1",
-    "http-server": "^14.0.0",
-    "json-server": "^0.17.4"
+    "express": "^4.17.1",
+    "cors": "^2.8.5"
   }
 }
