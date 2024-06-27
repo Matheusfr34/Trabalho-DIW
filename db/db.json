@@ -2,21 +2,21 @@
   "albuns": [
     {
         "id": "219736941",
-        "titulo": "GitHub Readme Stats",
+        "titulo": "GITHUB README STATS",
         "imagem": "assets/img/ti.jpg",
-        "link": "repo.html"
+        "link": "https://api.github.com/users/anuraghazra/repos"
    },
    {
-    "id": "219736941",
-    "titulo": "GitHub Readme Stats",
+    "id": "219736942",
+    "titulo": "HOMEWORK.GITHUB.IO",
     "imagem": "assets/img/ti.jpg",
-    "link": "repo.html"
+    "link": "https://api.github.com/users/anuraghazra/repos"
    },
    {
-   "id": "219736941",
-   "titulo": "GitHub Readme Stats",
+   "id": "819909110",
+   "titulo": "LINGUAGEM C",
    "imagem": "assets/img/ti.jpg",
-   "link": "repo.html"
+   "link": "https://api.github.com/users/anuraghazra/repos"
 }
   ], 
   "destaques": [
