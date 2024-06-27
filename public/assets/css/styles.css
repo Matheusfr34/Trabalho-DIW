@@ -31,3 +31,37 @@
     height: auto; /* Mantém a proporção da imagem */
     cursor: pointer; /* Cursor indicativo de que é clicável */
 }
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .list-group-item {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .list-group-item img {
+    border-radius: 50%;
+    align-self: flex-end;
+    margin-top: 10px;
+    max-width: 100px;
+  }
+  
+  .list-group-item strong {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  
+  .list-group-item span {
+    margin-bottom: 5px;
+  }
+  
